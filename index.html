@@ -1,0 +1,1951 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pronto - The Coffee People | Cafe in Selaiyur, Chennai</title>
+  <meta name="description" content="Pronto – The Coffee People. Selaiyur's cosiest work-friendly speciality café above Thalapakatti, Chennai. Brewing conversations since day one. Open 11 AM–11:30 PM daily." />
+  <meta name="keywords" content="cafe selaiyur, coffee shop Chennai, speciality coffee Tambaram, work friendly cafe Chennai, Pronto coffee, cafe near me Selaiyur" />
+  <meta property="og:title" content="Pronto – The Coffee People | Cafe in Selaiyur, Chennai" />
+  <meta property="og:description" content="Selaiyur's cosy work-friendly speciality café. Free Wi-Fi, plug points, quiet corners. Open 11 AM–11:30 PM." />
+  <meta property="og:type" content="restaurant" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Restaurant JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Pronto – The Coffee People",
+    "description": "First Speciality Coffee Shop in Selaiyur/Tambaram, Chennai. Brewed for Conversations.",
+    "url": "https://prontoindiaofficial.com",
+    "telephone": "+917348819037",
+    "priceRange": "₹₹",
+    "servesCuisine": ["Coffee", "Continental", "Indian", "Desserts"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "208 A, First Floor, Velachery Main Road, Above Thalapakatti, Camp Road Junction, Mahalakshmi Nagar",
+      "addressLocality": "Selaiyur",
+      "addressRegion": "Tamil Nadu",
+      "postalCode": "600073",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 12.9228131,
+      "longitude": 80.1431467
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "11:00",
+        "closes": "23:30"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "320",
+      "bestRating": "5"
+    },
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Power Outlets", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Pet Friendly", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Takeaway", "value": true}
+    ],
+    "sameAs": [
+      "https://instagram.com/prontoindiaofficial",
+      "https://www.facebook.com/cafeprontoindia/"
+    ]
+  }
+  </script>
+
+  <style>
+    /* ========== ROOT VARIABLES ========== */
+    :root {
+      --espresso: #1a0f08;
+      --dark-roast: #2c1810;
+      --brown: #5c3521;
+      --caramel: #a0612a;
+      --gold: #c8883f;
+      --latte: #d4a96a;
+      --cream: #f0e0c8;
+      --oat: #f7efe3;
+      --white: #fdf8f3;
+      --text-dark: #1a0f08;
+      --text-mid: #5c3521;
+      --text-light: #8a6545;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', system-ui, sans-serif;
+      --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      --mobile-bar-height: 64px;
+    }
+
+    /* ========== RESET & BASE ========== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      /* Reserve space for mobile sticky bar */
+      padding-bottom: var(--mobile-bar-height);
+    }
+    @media (min-width: 701px) { body { padding-bottom: 0; } }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: var(--font-body); }
+
+    /* ========== SKIP LINK (A11y) ========== */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      background: var(--gold);
+      color: var(--espresso);
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: 600;
+      z-index: 9999;
+      transition: top 0.2s;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* ========== SCROLL ANIMATIONS ========== */
+    .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(40px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal, .reveal-left, .reveal-right { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ========== NAV ========== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 5%;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+      transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition);
+    }
+    nav.scrolled {
+      background: rgba(26, 15, 8, 0.93);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 2px 30px rgba(0,0,0,0.25);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: 0.02em;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .nav-logo span {
+      font-size: 0.6rem;
+      font-family: var(--font-body);
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--latte);
+      opacity: 0.85;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.8;
+      transition: opacity var(--transition), color var(--transition);
+      font-weight: 500;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+    }
+    .nav-links a:hover, .nav-links a:focus { opacity: 1; color: var(--latte); outline: 2px solid var(--latte); outline-offset: 4px; border-radius: 2px; }
+    .nav-cta {
+      background: var(--gold) !important;
+      color: var(--espresso) !important;
+      padding: 0.45rem 1.2rem !important;
+      border-radius: 2rem;
+      font-weight: 600 !important;
+      opacity: 1 !important;
+      transition: background var(--transition), transform var(--transition) !important;
+      outline-color: var(--cream) !important;
+    }
+    .nav-cta:hover, .nav-cta:focus { background: var(--latte) !important; transform: scale(1.04) !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 12px;
+      min-width: 48px;
+      min-height: 48px;
+      justify-content: center;
+      align-items: center;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--cream);
+      border-radius: 2px;
+      transition: var(--transition);
+    }
+    .hamburger:focus { outline: 2px solid var(--latte); outline-offset: 4px; border-radius: 4px; }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 70px; left: 0; right: 0;
+      background: rgba(26, 15, 8, 0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 1.5rem 5%;
+      z-index: 99;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--cream);
+      font-size: 1rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      letter-spacing: 0.06em;
+      transition: color var(--transition);
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+    }
+    .mobile-menu a:hover, .mobile-menu a:focus { color: var(--latte); }
+
+    /* ========== HERO ========== */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Full-width hero background image with overlay */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&q=85&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center 40%;
+      background-repeat: no-repeat;
+    }
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        160deg,
+        rgba(14, 8, 4, 0.82) 0%,
+        rgba(26, 14, 8, 0.72) 40%,
+        rgba(44, 24, 16, 0.78) 70%,
+        rgba(20, 10, 4, 0.88) 100%
+      );
+    }
+    .hero-hours-badge {
+      position: absolute;
+      top: 90px;
+      right: 5%;
+      background: rgba(200, 136, 63, 0.18);
+      border: 1px solid rgba(200, 136, 63, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 2rem;
+      padding: 0.5rem 1.1rem;
+      color: var(--latte);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      z-index: 3;
+    }
+    .hours-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #4caf50;
+      animation: pulse 2s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; box-shadow: 0 0 0 0 rgba(76,175,80,0.5); } 50% { opacity: 0.7; box-shadow: 0 0 0 5px rgba(76,175,80,0); } }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 5%;
+      max-width: 820px;
+    }
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--latte);
+      margin-bottom: 1.4rem;
+      font-weight: 500;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.3s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 8vw, 6.2rem);
+      font-weight: 700;
+      color: var(--cream);
+      line-height: 1.0;
+      margin-bottom: 0.3rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.5s forwards;
+    }
+    .hero-title em { font-style: italic; color: var(--latte); }
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(1rem, 2.5vw, 1.45rem);
+      color: rgba(240, 224, 200, 0.72);
+      font-style: italic;
+      margin-top: 0.8rem;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.7s forwards;
+    }
+    .hero-subtext {
+      font-size: clamp(0.88rem, 1.8vw, 1.05rem);
+      color: rgba(240, 224, 200, 0.55);
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.8s forwards;
+      letter-spacing: 0.04em;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 0.9s 0.9s forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--espresso);
+      padding: 0.9rem 2.2rem;
+      border-radius: 3rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 24px rgba(200, 136, 63, 0.4);
+      min-height: 48px;
+    }
+    .btn-primary:hover, .btn-primary:focus { background: var(--latte); transform: translateY(-2px); box-shadow: 0 8px 32px rgba(200, 136, 63, 0.5); outline: 2px solid var(--cream); outline-offset: 3px; }
+    .btn-outline {
+      background: transparent;
+      color: var(--cream);
+      padding: 0.88rem 2.2rem;
+      border-radius: 3rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      border: 1.5px solid rgba(240, 224, 200, 0.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: border-color var(--transition), background var(--transition), transform var(--transition);
+      min-height: 48px;
+    }
+    .btn-outline:hover, .btn-outline:focus { border-color: var(--latte); background: rgba(212, 169, 106, 0.12); transform: translateY(-2px); outline: 2px solid var(--latte); outline-offset: 3px; }
+    .hero-scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(240,224,200,0.4);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      animation: bob 2s ease-in-out infinite;
+      z-index: 2;
+    }
+    @keyframes bob {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+    .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, rgba(212, 169, 106, 0.5), transparent); }
+
+    /* ========== MOBILE STICKY BOTTOM BAR ========== */
+    .mobile-bottom-bar {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      height: var(--mobile-bar-height);
+      background: var(--espresso);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      z-index: 200;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    }
+    .mobile-bottom-bar-inner {
+      display: flex;
+      height: 100%;
+    }
+    .mbb-btn {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      color: var(--latte);
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      min-height: 48px;
+      padding: 0;
+      transition: background var(--transition), color var(--transition);
+      text-decoration: none;
+    }
+    .mbb-btn:hover, .mbb-btn:focus { background: rgba(200,136,63,0.15); color: var(--gold); outline: none; }
+    .mbb-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: -2px; }
+    .mbb-icon { font-size: 1.3rem; line-height: 1; }
+    .mbb-divider { width: 1px; background: rgba(255,255,255,0.1); align-self: stretch; margin: 12px 0; }
+    .mbb-btn.order { background: rgba(200,136,63,0.2); color: var(--gold); }
+    .mbb-btn.order:hover { background: rgba(200,136,63,0.35); }
+
+    @media (max-width: 700px) {
+      .mobile-bottom-bar { display: block; }
+    }
+
+    /* ========== SECTION COMMONS ========== */
+    section { padding: 7rem 5%; }
+    .section-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--caramel);
+      margin-bottom: 0.8rem;
+      font-weight: 500;
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      color: var(--espresso);
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .section-title em { font-style: italic; color: var(--caramel); }
+    .section-sub {
+      font-size: 1.05rem;
+      color: var(--text-light);
+      line-height: 1.75;
+      max-width: 580px;
+    }
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: linear-gradient(to right, var(--gold), var(--latte));
+      margin-bottom: 2rem;
+      border-radius: 2px;
+    }
+
+    /* ========== ABOUT ========== */
+    #about { background: var(--oat); position: relative; overflow: hidden; }
+    #about::before {
+      content: '"';
+      font-family: var(--font-display);
+      font-size: 28rem;
+      color: var(--cream);
+      position: absolute;
+      top: -8rem; right: -2rem;
+      line-height: 1;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .about-text .section-sub { max-width: 100%; }
+    .about-text p + p { margin-top: 1.2rem; }
+    .about-amenities {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .amenity-chip {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--white);
+      border: 1px solid var(--cream);
+      border-radius: 2rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-mid);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .amenity-chip:hover { box-shadow: 0 4px 16px rgba(26,15,8,0.1); transform: translateY(-2px); }
+    .amenity-icon { font-size: 1.1rem; }
+    .about-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      background: var(--espresso);
+      color: var(--latte);
+      padding: 0.6rem 1.4rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+    }
+    .about-badge .dot { width: 7px; height: 7px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; }
+    .about-visual { position: relative; }
+    .about-img-main {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(26, 15, 8, 0.22);
+      aspect-ratio: 4/5;
+      background: var(--brown);
+    }
+    .about-img-main img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .about-img-main:hover img { transform: scale(1.03); }
+    .about-float-card {
+      position: absolute;
+      bottom: -2rem; left: -2.5rem;
+      background: var(--espresso);
+      color: var(--cream);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+      min-width: 180px;
+    }
+    .about-float-card .big-num { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .about-float-card p { font-size: 0.75rem; color: var(--latte); margin-top: 0.3rem; letter-spacing: 0.05em; }
+    .stars-row { color: var(--gold); font-size: 1rem; margin-top: 0.4rem; }
+
+    /* ========== MENU ========== */
+    #menu { background: var(--white); }
+    .menu-header { max-width: 1200px; margin: 0 auto 3.5rem; }
+    .menu-tabs {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      role: tablist;
+    }
+    .menu-tab {
+      padding: 0.5rem 1.4rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      border: 1.5px solid var(--cream);
+      color: var(--text-light);
+      background: transparent;
+      transition: all var(--transition);
+      min-height: 48px;
+    }
+    .menu-tab.active, .menu-tab:hover, .menu-tab:focus {
+      background: var(--espresso);
+      color: var(--latte);
+      border-color: var(--espresso);
+      outline: none;
+    }
+    .menu-tab:focus-visible { outline: 2px solid var(--caramel); outline-offset: 2px; }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .menu-card {
+      background: var(--oat);
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--cream);
+      transition: transform var(--transition), box-shadow var(--transition);
+      cursor: default;
+      position: relative;
+    }
+    .menu-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(26, 15, 8, 0.12); }
+    .menu-card-img { height: 180px; overflow: hidden; background: var(--brown); position: relative; }
+    .menu-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .menu-card:hover .menu-card-img img { transform: scale(1.07); }
+    .menu-card-veg {
+      position: absolute;
+      top: 0.7rem; right: 0.7rem;
+      width: 20px; height: 20px;
+      border: 2px solid #3a8a3a;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu-card-veg::after { content: ''; width: 8px; height: 8px; background: #3a8a3a; border-radius: 50%; }
+    .menu-card-veg.non-veg { border-color: #c0392b; }
+    .menu-card-veg.non-veg::after { background: #c0392b; border-radius: 0; transform: rotate(45deg); }
+    .menu-card-body { padding: 1.2rem 1.3rem 1.4rem; }
+    .menu-card-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 600; color: var(--espresso); margin-bottom: 0.35rem; }
+    .menu-card-desc { font-size: 0.8rem; color: var(--text-light); line-height: 1.55; min-height: 2.5rem; }
+    .menu-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 1rem; flex-wrap: wrap; gap: 0.4rem; }
+    .menu-price { font-size: 1.05rem; font-weight: 600; color: var(--caramel); }
+    .menu-tag { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; background: var(--espresso); color: var(--latte); padding: 0.22rem 0.7rem; border-radius: 1rem; }
+    .menu-card[data-cat] { display: block; }
+
+    /* Download Menu CTA */
+    .menu-download-wrap {
+      max-width: 1200px;
+      margin: 2.5rem auto 0;
+      text-align: center;
+    }
+    .btn-download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: var(--oat);
+      border: 2px solid var(--caramel);
+      color: var(--caramel);
+      padding: 0.85rem 2rem;
+      border-radius: 2rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: all var(--transition);
+      min-height: 48px;
+    }
+    .btn-download:hover, .btn-download:focus { background: var(--caramel); color: var(--white); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(160,97,42,0.3); }
+    .btn-download svg { flex-shrink: 0; }
+
+    /* ========== GALLERY ========== */
+    #gallery { background: var(--espresso); padding: 7rem 5%; }
+    #gallery .section-eyebrow { color: var(--latte); }
+    #gallery .section-title { color: var(--cream); }
+    #gallery .divider { background: linear-gradient(to right, var(--latte), rgba(255,255,255,0.4)); }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(3, 220px);
+      gap: 12px;
+      max-width: 1200px;
+      margin: 3rem auto 0;
+    }
+    .g-item {
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      background: var(--dark-roast);
+      contain: layout paint;
+    }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.55s ease, filter 0.55s ease; filter: brightness(0.88); }
+    .g-item:hover img { transform: scale(1.07); filter: brightness(1); }
+    .g-item::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,15,8,0.5), transparent 50%); pointer-events: none; }
+    .g-item-1 { grid-column: 1 / 6; grid-row: 1 / 3; }
+    .g-item-2 { grid-column: 6 / 9; grid-row: 1 / 2; }
+    .g-item-3 { grid-column: 9 / 13; grid-row: 1 / 2; }
+    .g-item-4 { grid-column: 6 / 10; grid-row: 2 / 4; }
+    .g-item-5 { grid-column: 10 / 13; grid-row: 2 / 3; }
+    .g-item-6 { grid-column: 1 / 4; grid-row: 3 / 4; }
+    .g-item-7 { grid-column: 4 / 6; grid-row: 3 / 4; }
+    .g-item-8 { grid-column: 10 / 13; grid-row: 3 / 4; }
+
+    /* ========== EXPERIENCE ========== */
+    #experience { background: var(--oat); }
+    .exp-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .exp-features { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem; }
+    .exp-feature {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.5rem;
+      border: 1px solid var(--cream);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .exp-feature:hover { box-shadow: 0 8px 32px rgba(26, 15, 8, 0.1); transform: translateY(-3px); }
+    .exp-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+    .exp-feature h3 { font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--espresso); margin-bottom: 0.35rem; }
+    .exp-feature p { font-size: 0.8rem; color: var(--text-light); line-height: 1.55; }
+    .exp-visual { position: relative; }
+    .exp-img-wrap { border-radius: 16px; overflow: hidden; aspect-ratio: 4/5; background: var(--brown); box-shadow: 0 24px 60px rgba(26, 15, 8, 0.2); }
+    .exp-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .exp-float {
+      position: absolute; top: 2rem; right: -2rem;
+      background: var(--gold);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(200, 136, 63, 0.35);
+    }
+    .exp-float .big { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--espresso); line-height: 1; }
+    .exp-float small { font-size: 0.72rem; color: var(--espresso); opacity: 0.75; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
+
+    /* ========== REVIEWS ========== */
+    #reviews { background: var(--white); }
+    .reviews-header { max-width: 1200px; margin: 0 auto 3rem; }
+    /* Carousel wrapper */
+    .reviews-carousel-wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .reviews-carousel {
+      display: flex;
+      gap: 1.5rem;
+      overflow: hidden;
+      scroll-behavior: smooth;
+    }
+    .review-card {
+      background: var(--oat);
+      border-radius: 14px;
+      padding: 2rem;
+      border: 1px solid var(--cream);
+      position: relative;
+      transition: box-shadow var(--transition), transform var(--transition);
+      min-width: calc(33.33% - 1rem);
+      flex-shrink: 0;
+    }
+    @media (max-width: 900px) { .review-card { min-width: calc(50% - 0.75rem); } }
+    @media (max-width: 600px) { .review-card { min-width: calc(100% - 0rem); } }
+    .review-card:hover { box-shadow: 0 12px 40px rgba(26, 15, 8, 0.1); transform: translateY(-4px); }
+    .review-card::before { content: '"'; font-family: var(--font-display); font-size: 5rem; color: var(--cream); position: absolute; top: 0.5rem; left: 1.2rem; line-height: 1; pointer-events: none; }
+    .review-stars { color: var(--gold); font-size: 0.95rem; margin-bottom: 1rem; }
+    .review-text { font-size: 0.9rem; color: var(--text-mid); line-height: 1.75; font-style: italic; margin-bottom: 1.5rem; }
+    .review-author { display: flex; align-items: center; gap: 0.8rem; }
+    .review-avatar { width: 40px; height: 40px; border-radius: 50%; background: var(--brown); display: flex; align-items: center; justify-content: center; font-size: 1rem; color: var(--latte); font-weight: 600; font-family: var(--font-display); flex-shrink: 0; }
+    .review-name { font-weight: 600; font-size: 0.88rem; color: var(--espresso); }
+    .review-via { font-size: 0.73rem; color: var(--text-light); margin-top: 0.1rem; }
+    .carousel-controls {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel-btn {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid var(--cream);
+      background: var(--white);
+      color: var(--espresso);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all var(--transition);
+    }
+    .carousel-btn:hover, .carousel-btn:focus { background: var(--espresso); color: var(--latte); border-color: var(--espresso); outline: 2px solid var(--caramel); outline-offset: 2px; }
+    .carousel-dots { display: flex; gap: 0.5rem; align-items: center; }
+    .carousel-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: none;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+      padding: 0;
+    }
+    .carousel-dot.active { background: var(--gold); transform: scale(1.3); }
+    .overall-rating {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--espresso);
+      border-radius: 16px;
+      padding: 2rem 2.5rem;
+      margin-top: 3rem;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      flex-wrap: wrap;
+    }
+    .overall-rating .big-num { font-family: var(--font-display); font-size: 4.5rem; font-weight: 700; color: var(--gold); line-height: 1; }
+    .overall-rating .stars { color: var(--gold); font-size: 1.4rem; margin-bottom: 0.4rem; }
+    .overall-rating p { color: var(--latte); font-size: 0.88rem; }
+    .rating-bars { flex: 1; min-width: 200px; }
+    .rating-bar { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.5rem; }
+    .rating-bar span { font-size: 0.75rem; color: var(--latte); min-width: 12px; }
+    .bar-track { flex: 1; height: 6px; background: rgba(255,255,255,0.1); border-radius: 3px; overflow: hidden; }
+    .bar-fill { height: 100%; background: var(--gold); border-radius: 3px; }
+    .rating-count { font-size: 0.75rem; color: var(--text-light); white-space: nowrap; }
+
+    /* ========== LOCATION ========== */
+    #location { background: var(--oat); }
+    .location-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .info-block { background: var(--white); border-radius: 12px; padding: 1.5rem; margin-top: 1.5rem; border: 1px solid var(--cream); }
+    .info-row { display: flex; gap: 1rem; align-items: flex-start; padding: 0.9rem 0; border-bottom: 1px solid var(--cream); }
+    .info-row:last-child { border-bottom: none; }
+    .info-icon { font-size: 1.2rem; width: 28px; flex-shrink: 0; margin-top: 0.1rem; }
+    .info-label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); font-weight: 500; margin-bottom: 0.2rem; }
+    .info-val { font-size: 0.92rem; color: var(--espresso); font-weight: 500; line-height: 1.45; }
+    .info-val a { color: var(--caramel); }
+    .info-val a:hover, .info-val a:focus { text-decoration: underline; }
+    .location-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #25D366;
+      color: #fff;
+      padding: 0.85rem 1.6rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      min-height: 48px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .btn-whatsapp:hover, .btn-whatsapp:focus { background: #1ebe5a; transform: translateY(-2px); outline: 2px solid #25D366; outline-offset: 3px; }
+    .map-embed { border-radius: 14px; overflow: hidden; box-shadow: 0 16px 48px rgba(26, 15, 8, 0.12); height: 440px; }
+    .map-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+
+    /* ========== FOOTER ========== */
+    footer { background: var(--espresso); padding: 4rem 5% 2rem; }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .footer-brand .nav-logo { margin-bottom: 1rem; }
+    .footer-brand p { font-size: 0.85rem; color: rgba(240, 224, 200, 0.55); line-height: 1.7; max-width: 300px; }
+    .footer-social { display: flex; gap: 0.8rem; margin-top: 1.5rem; }
+    .social-link {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--latte);
+      font-size: 0.9rem;
+      transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    }
+    .social-link:hover, .social-link:focus { background: var(--gold); border-color: var(--gold); color: var(--espresso); transform: translateY(-2px); outline: 2px solid var(--latte); outline-offset: 2px; }
+    .footer-col h4 { font-family: var(--font-display); font-size: 1rem; color: var(--cream); margin-bottom: 1.2rem; font-weight: 600; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul li a { font-size: 0.83rem; color: rgba(240, 224, 200, 0.55); transition: color var(--transition); min-height: 44px; display: inline-flex; align-items: center; }
+    .footer-col ul li a:hover, .footer-col ul li a:focus { color: var(--latte); }
+    .fssai-note { font-size: 0.75rem; color: rgba(240,224,200,0.3); margin-top: 1.5rem; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.06); padding-top: 1rem; }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 2rem auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom p { font-size: 0.78rem; color: rgba(240,224,200,0.35); }
+    .footer-bottom a { color: var(--latte); }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 1100px) {
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .about-inner, .exp-inner, .location-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .about-float-card { left: 1rem; }
+      .exp-float { right: 1rem; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .g-item { grid-column: auto !important; grid-row: auto !important; height: 200px; }
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+      .menu-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      nav { padding: 0 4%; }
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 5rem 4%; }
+      .exp-features { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .hero-hours-badge { top: 80px; font-size: 0.72rem; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .about-amenities { gap: 0.75rem; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .g-item { height: 220px; }
+      .overall-rating { flex-direction: column; }
+      .location-ctas { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- NAV -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav-logo" aria-label="Pronto – The Coffee People, home">
+      Pronto
+      <span>The Coffee People</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#location" class="nav-cta">Visit Us</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <a href="#about" onclick="closeMobile()">About</a>
+    <a href="#menu" onclick="closeMobile()">Menu</a>
+    <a href="#gallery" onclick="closeMobile()">Gallery</a>
+    <a href="#experience" onclick="closeMobile()">Experience</a>
+    <a href="#reviews" onclick="closeMobile()">Reviews</a>
+    <a href="#location" onclick="closeMobile()">Visit Us</a>
+  </div>
+
+  <main id="main-content">
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Welcome to Pronto">
+    <!-- Full-width café interior image -->
+    <div class="hero-bg" role="img" aria-label="Pronto café interior — warm, cosy atmosphere"></div>
+
+    <!-- Hours badge -->
+    <div class="hero-hours-badge" aria-label="Open today 11:00 AM to 11:30 PM">
+      <span class="hours-dot" aria-hidden="true"></span>
+      Open Today · 11:00 AM – 11:30 PM
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" aria-hidden="true">✦ First Speciality Coffee Shop · Selaiyur, Chennai ✦</p>
+      <h1 class="hero-title">Tradition Meets<br /><em>Innovation</em></h1>
+      <p class="hero-tagline">Selaiyur's cosy work-friendly café</p>
+      <p class="hero-subtext">Where every cup tells a story — and every visit feels like coming home.</p>
+      <div class="hero-ctas">
+        <a href="#menu" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/></svg>
+          View Menu
+        </a>
+        <a href="https://maps.app.goo.gl/wN2Aeu9UW6yF6yXF6" target="_blank" rel="noopener noreferrer" class="btn-outline" aria-label="Get directions to Pronto café (opens Google Maps)">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Get Directions
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" aria-labelledby="about-heading">
+    <div class="about-inner">
+      <div class="about-text reveal-left">
+        <p class="section-eyebrow">Our Story</p>
+        <h2 class="section-title" id="about-heading">More than coffee.<br /><em>It's a feeling.</em></h2>
+        <div class="divider" aria-hidden="true"></div>
+        <p class="section-sub">
+          Pronto was born from a simple belief: that great coffee deserves a great space. Nestled above Thalapakatti on Velachery Main Road in Selaiyur, we're Chennai's first speciality coffee destination in the Tambaram corridor — where curated brews meet warm, unhurried ambiance.
+        </p>
+        <p class="section-sub">
+          Every bean is chosen with care, every cup crafted with quality ingredients. Whether you're powering through work, catching up with friends, or simply craving a quiet corner with reliable Wi-Fi — Pronto is your third place.
+        </p>
+
+        <!-- 3 Amenity icons -->
+        <div class="about-amenities" role="list" aria-label="Amenities">
+          <div class="amenity-chip" role="listitem">
+            <span class="amenity-icon" aria-hidden="true">📶</span>
+            Free Wi-Fi
+          </div>
+          <div class="amenity-chip" role="listitem">
+            <span class="amenity-icon" aria-hidden="true">🔌</span>
+            Plug Points
+          </div>
+          <div class="amenity-chip" role="listitem">
+            <span class="amenity-icon" aria-hidden="true">🔇</span>
+            Quiet Corners
+          </div>
+        </div>
+
+        <div class="about-badge">
+          <span class="dot" aria-hidden="true"></span>
+          Open daily · 11 AM – 11:30 PM
+        </div>
+      </div>
+      <div class="about-visual reveal-right">
+        <div class="about-img-main">
+          <img
+            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80&auto=format&fit=crop"
+            alt="Pronto café interior showing warm seating, ambient lighting, and cosy work-friendly atmosphere"
+            loading="lazy"
+            width="600"
+            height="750"
+          />
+        </div>
+        <div class="about-float-card" aria-label="4.5 star Google rating">
+          <div class="big-num" aria-hidden="true">4.5</div>
+          <div class="stars-row" aria-hidden="true">★★★★½</div>
+          <p>Google Rating</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" aria-labelledby="menu-heading">
+    <div class="menu-header reveal">
+      <p class="section-eyebrow">What We Serve</p>
+      <h2 class="section-title" id="menu-heading">The <em>Menu</em></h2>
+      <div class="divider" aria-hidden="true"></div>
+      <p class="section-sub">Specially curated beverages &amp; delectable food in one place. Prices inclusive of taxes.</p>
+      <div class="menu-tabs" id="menuTabs" role="tablist" aria-label="Menu categories">
+        <button class="menu-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="menu-tab" data-filter="coffee" role="tab" aria-selected="false">Coffee</button>
+        <button class="menu-tab" data-filter="cold" role="tab" aria-selected="false">Cold Drinks</button>
+        <button class="menu-tab" data-filter="snacks" role="tab" aria-selected="false">Snacks</button>
+        <button class="menu-tab" data-filter="mains" role="tab" aria-selected="false">Mains</button>
+        <button class="menu-tab" data-filter="desserts" role="tab" aria-selected="false">Desserts</button>
+      </div>
+    </div>
+
+    <div class="menu-grid" id="menuGrid" role="list" aria-label="Menu items">
+
+      <!-- ===== COFFEE ===== -->
+      <article class="menu-card reveal" data-cat="coffee" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&q=80&auto=format&fit=crop" alt="Spanish Latte — signature espresso over condensed milk" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Spanish Latte</div>
+          <div class="menu-card-desc">Signature espresso over condensed milk — rich, creamy, and irresistible.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">Hot ₹240 · Iced ₹245</span>
+            <span class="menu-tag">Bestseller</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="coffee" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1534778101976-62847782c213?w=400&q=80&auto=format&fit=crop" alt="Cappuccino — velvety microfoam with freshly pulled espresso" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cappuccino</div>
+          <div class="menu-card-desc">Classic Italian style — velvety microfoam, freshly pulled espresso, perfect balance.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹220</span>
+            <span class="menu-tag">Classic</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="coffee" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1485808191679-5f86510bd9d4?w=400&q=80&auto=format&fit=crop" alt="Café Latte — smooth espresso with steamed milk" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Café Latte</div>
+          <div class="menu-card-desc">Smooth espresso with steamed milk. Simple, elegant, and endlessly comforting.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">Hot ₹220 · Iced ₹245</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="coffee" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=400&q=80&auto=format&fit=crop" alt="Affogato Royal — espresso poured over vanilla ice cream" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Affogato Royal</div>
+          <div class="menu-card-desc">A bold shot of espresso poured over a scoop of vanilla ice cream. Italian dessert-coffee perfection.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹210</span>
+            <span class="menu-tag">Chef's Pick 👨‍🍳</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="coffee" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1581996323441-b6d9e3a53a21?w=400&q=80&auto=format&fit=crop" alt="Salted Caramel Latte — espresso with caramel syrup and sea salt" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Salted Caramel Latte</div>
+          <div class="menu-card-desc">Espresso with steamed milk, caramel syrup, and a touch of sea salt — sweet meets salty.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">Hot ₹240 · Iced ₹245</span>
+            <span class="menu-tag">Popular</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="coffee" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1551030173-122aabd4c927?w=400&q=80&auto=format&fit=crop" alt="Cold Brew — smooth slow-steeped cold coffee" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Cold Brew</div>
+          <div class="menu-card-desc">Slow-steeped for 12 hours, naturally smooth and less acidic. Coffee the patient way.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹260</span>
+            <span class="menu-tag">Must Try</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== COLD DRINKS ===== -->
+      <article class="menu-card reveal" data-cat="cold" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&q=80&auto=format&fit=crop" alt="Signature Cold Coffee — Pronto's iconic blended cold coffee" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Signature Cold Coffee</div>
+          <div class="menu-card-desc">Pronto's own blended cold coffee — chilled, smooth, and dangerously good.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹240</span>
+            <span class="menu-tag">Bestseller</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="cold" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?w=400&q=80&auto=format&fit=crop" alt="Biscoff Coffee — blended cold coffee with rich Biscoff cookie butter" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Biscoff Coffee</div>
+          <div class="menu-card-desc">Blended cold coffee with rich Biscoff cookie butter. Indulgent and utterly addictive.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹260</span>
+            <span class="menu-tag">Must Try</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="cold" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=400&q=80&auto=format&fit=crop" alt="Thick Shakes — Biscoff, Strawberry, Mango and more" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Thick Shakes</div>
+          <div class="menu-card-desc">Biscoff, Strawberry, Mango, Pineapple, Mix Berry, Choco, Vanilla, Crunchy. Rich and filling.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹240 – ₹260</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== SNACKS ===== -->
+      <article class="menu-card reveal" data-cat="snacks" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&q=80&auto=format&fit=crop" alt="Turkey Bacon Croissant — flaky croissant with turkey bacon" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg non-veg" aria-label="Non-vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Turkey Bacon Croissant</div>
+          <div class="menu-card-desc">Flaky butter croissant with turkey bacon, cheese, and dijon mustard. Café favourite.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹320</span>
+            <span class="menu-tag">Popular</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="snacks" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&q=80&auto=format&fit=crop" alt="Chicken Caesar Salad — romaine, grilled chicken, parmesan" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg non-veg" aria-label="Non-vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Chicken Caesar Salad</div>
+          <div class="menu-card-desc">Romaine lettuce, grilled chicken, parmesan shavings, croutons, and classic Caesar dressing.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹340</span>
+            <span class="menu-tag">Healthy</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="snacks" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=400&q=80&auto=format&fit=crop" alt="French Fries — classic crispy seasoned fries" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">French Fries</div>
+          <div class="menu-card-desc">Classic or Peri-Peri — perfectly crispy, perfectly seasoned. Perfect with your coffee.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹200</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="snacks" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1608835291093-394b0c943a75?w=400&q=80&auto=format&fit=crop" alt="Chilli Paneer — cottage cheese in spicy Asian sauce" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Chilli Paneer</div>
+          <div class="menu-card-desc">Cottage cheese tossed in a spicy, flavourful Asian sauce. A perennial crowd-pleaser.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹280</span>
+            <span class="menu-tag">Popular</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="snacks" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=400&q=80&auto=format&fit=crop" alt="Chicken Lollipop — crispy tender chicken in spicy Asian flavours" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg non-veg" aria-label="Non-vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Chicken Lollipop</div>
+          <div class="menu-card-desc">Crispy yet tender chicken lollipop infused with spicy Asian flavours. Chef's Special.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹300</span>
+            <span class="menu-tag">Chef's Pick 👨‍🍳</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== MAINS ===== -->
+      <article class="menu-card reveal" data-cat="mains" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&q=80&auto=format&fit=crop" alt="Delhi Style Butter Chicken — rich tamatar-makhanwala gravy" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg non-veg" aria-label="Non-vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Delhi Style Butter Chicken</div>
+          <div class="menu-card-desc">Barbecued chicken &amp; green peppers in rich tamatar-makhanwala gravy. Served with rice or roti.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹300</span>
+            <span class="menu-tag">Must Try</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="mains" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&q=80&auto=format&fit=crop" alt="Paneer Makhani — paneer in homemade tomato gravy" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Paneer Makhani</div>
+          <div class="menu-card-desc">Barbecued paneer &amp; green peppers in homemade tamatar-makhanwala gravy. Served with rice or roti.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹280</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="mains" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1574653853027-5382a3d23a15?w=400&q=80&auto=format&fit=crop" alt="Mutton Vindaloo — tender lamb with vinegar, garlic and spices" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg non-veg" aria-label="Non-vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Mutton Vindaloo</div>
+          <div class="menu-card-desc">Tender lamb marinated &amp; cooked with vinegar, garlic, ginger, and aromatic spices.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹350</span>
+            <span class="menu-tag">Spicy 🌶</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===== DESSERTS ===== -->
+      <article class="menu-card reveal" data-cat="desserts" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&q=80&auto=format&fit=crop" alt="Sizzling Brownie — walnut brownie with ice cream and hot chocolate" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Sizzling Brownie</div>
+          <div class="menu-card-desc">Walnut brownie with ice cream on top, served with melted chocolate poured tableside.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹350</span>
+            <span class="menu-tag">Showstopper 🔥</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="desserts" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&q=80&auto=format&fit=crop" alt="Biscoff Cheesecake — creamy Biscoff filling with cookie crumbs" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Biscoff Cheesecake</div>
+          <div class="menu-card-desc">Creamy Biscoff filling topped with melted Biscoff butter and cookie crumbs.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹300</span>
+            <span class="menu-tag">Must Try</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="desserts" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?w=400&q=80&auto=format&fit=crop" alt="Red Velvet Cake — moist layers with cream cheese icing" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Red Velvet Cake</div>
+          <div class="menu-card-desc">Moist layers of Red Velvet filled and topped with silky cream cheese icing.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹275</span>
+            <span class="menu-tag">Popular</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="menu-card reveal" data-cat="desserts" role="listitem">
+        <div class="menu-card-img">
+          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=400&q=80&auto=format&fit=crop" alt="Rasmalai — soft cottage cheese dumplings in aromatic milk syrup" loading="lazy" width="400" height="180" />
+          <div class="menu-card-veg" aria-label="Vegetarian"></div>
+        </div>
+        <div class="menu-card-body">
+          <div class="menu-card-name">Rasmalai</div>
+          <div class="menu-card-desc">Soft cottage cheese dumplings soaked in creamy, aromatic milk syrup with cardamom and saffron.</div>
+          <div class="menu-card-footer">
+            <span class="menu-price">₹225</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Menu note -->
+    <div style="max-width:1200px;margin:2.5rem auto 0;padding:1.2rem 1.8rem;background:var(--oat);border-radius:10px;border:1px solid var(--cream);display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap;">
+      <span aria-hidden="true" style="font-size:1.1rem;">ℹ️</span>
+      <p style="font-size:0.8rem;color:var(--text-light);line-height:1.7;">
+        <strong style="color:var(--espresso);">Pro tip:</strong> Ask our staff if there's anything special off the menu!
+        &nbsp;·&nbsp; Kebabs available from <strong style="color:var(--espresso);">6:30 PM</strong> onwards.
+        &nbsp;·&nbsp; Add-ons: Vanilla, Caramel, Hazelnut, Cinnamon, Coconut — <strong style="color:var(--espresso);">+₹30</strong>.
+        &nbsp;·&nbsp; Almond Milk available at <strong style="color:var(--espresso);">+₹75</strong>.
+        &nbsp;·&nbsp; <span style="color:#3a8a3a;font-weight:600;" aria-label="vegetarian indicator">●</span> Veg &nbsp; <span style="color:#c0392b;font-weight:600;" aria-label="non-vegetarian indicator">●</span> Non-Veg
+      </p>
+    </div>
+
+    <!-- Download Menu PDF button -->
+    <div class="menu-download-wrap reveal">
+      <a href="#" class="btn-download" aria-label="Download the full Pronto menu as PDF" onclick="alert('Menu PDF coming soon! Visit us or call +91 73488 19037 for the full menu.'); return false;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Menu PDF
+      </a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" aria-labelledby="gallery-heading">
+    <div style="max-width:1200px;margin:0 auto;" class="reveal">
+      <p class="section-eyebrow">Inside Pronto</p>
+      <h2 class="section-title" id="gallery-heading" style="color:var(--cream);">The <em style="color:var(--latte)">Vibe</em></h2>
+      <div class="divider" aria-hidden="true" style="background:linear-gradient(to right, var(--latte), rgba(255,255,255,0.4));"></div>
+    </div>
+    <div class="gallery-grid" role="list" aria-label="Gallery of Pronto café photos">
+      <div class="g-item g-item-1 reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80&auto=format&fit=crop" alt="Pronto café interior — warm wooden tables, cosy seating areas" loading="lazy" width="800" height="660" />
+      </div>
+      <div class="g-item g-item-2 reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&q=80&auto=format&fit=crop" alt="Latte art — barista crafting beautiful coffee art in a warm cup" loading="lazy" width="500" height="220" />
+      </div>
+      <div class="g-item g-item-3 reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&q=80&auto=format&fit=crop" alt="Espresso shot — rich, golden crema on freshly pulled espresso" loading="lazy" width="500" height="220" />
+      </div>
+      <div class="g-item g-item-4 reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=600&q=80&auto=format&fit=crop" alt="Café ambiance — warm lighting and comfortable work-friendly seating" loading="lazy" width="600" height="440" />
+      </div>
+      <div class="g-item g-item-5 reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=500&q=80&auto=format&fit=crop" alt="Pastries and desserts — fresh baked goods on display at Pronto" loading="lazy" width="500" height="220" />
+      </div>
+      <div class="g-item g-item-6 reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1512568400610-62da28bc8a13?w=400&q=80&auto=format&fit=crop" alt="Cold brew coffee — refreshing cold brew in a tall glass" loading="lazy" width="400" height="220" />
+      </div>
+      <div class="g-item g-item-7 reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1516743619420-154b70a65fea?w=400&q=80&auto=format&fit=crop" alt="Cosy corner seating — a quiet corner perfect for working or reading" loading="lazy" width="400" height="220" />
+      </div>
+      <div class="g-item g-item-8 reveal" role="listitem">
+        <img src="https://images.unsplash.com/photo-1520201163981-8cc95007dd2a?w=500&q=80&auto=format&fit=crop" alt="Coffee bar details — the Pronto brewing station with specialty equipment" loading="lazy" width="500" height="220" />
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" aria-labelledby="experience-heading">
+    <div class="exp-inner">
+      <div class="reveal-left">
+        <p class="section-eyebrow">Why Pronto</p>
+        <h2 class="section-title" id="experience-heading">More than a<br /><em>coffee shop</em></h2>
+        <div class="divider" aria-hidden="true"></div>
+        <p class="section-sub">
+          We've designed Pronto to be your third place — not home, not work, but somewhere in between. Somewhere you actually want to be.
+        </p>
+        <div class="exp-features">
+          <div class="exp-feature">
+            <div class="exp-icon" aria-hidden="true">☕</div>
+            <h3>Speciality Coffee</h3>
+            <p>Carefully sourced beans, precision brewing — every cup crafted with intention.</p>
+          </div>
+          <div class="exp-feature">
+            <div class="exp-icon" aria-hidden="true">📶</div>
+            <h3>High-Speed WiFi</h3>
+            <p>Stay connected, work remotely, or stream seamlessly. We've got you covered.</p>
+          </div>
+          <div class="exp-feature">
+            <div class="exp-icon" aria-hidden="true">🛋️</div>
+            <h3>Cozy Seating</h3>
+            <p>Thoughtfully designed spaces — solo nooks, group corners, and ambient lighting.</p>
+          </div>
+          <div class="exp-feature">
+            <div class="exp-icon" aria-hidden="true">🐾</div>
+            <h3>Pet-Friendly</h3>
+            <p>Bring your furry companion along. Pronto welcomes the whole family.</p>
+          </div>
+          <div class="exp-feature">
+            <div class="exp-icon" aria-hidden="true">🍽️</div>
+            <h3>Dine-in & Takeaway</h3>
+            <p>Eat in, take out, or have it delivered — coffee your way, always.</p>
+          </div>
+          <div class="exp-feature">
+            <div class="exp-icon" aria-hidden="true">🌙</div>
+            <h3>Late Night Hours</h3>
+            <p>Open until 11:30 PM. Because cravings don't follow a schedule.</p>
+          </div>
+        </div>
+      </div>
+      <div class="exp-visual reveal-right">
+        <div class="exp-img-wrap">
+          <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=700&q=80&auto=format&fit=crop" alt="Pronto café experience — people enjoying coffee in a warm, welcoming atmosphere" loading="lazy" width="700" height="875" />
+        </div>
+        <div class="exp-float" aria-label="Average cost for two people: 450 rupees">
+          <div class="big">₹450</div>
+          <small>Avg. for two</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section id="reviews" aria-labelledby="reviews-heading">
+    <div class="reviews-header reveal">
+      <p class="section-eyebrow">What People Say</p>
+      <h2 class="section-title" id="reviews-heading">Loved by <em>coffee lovers</em></h2>
+      <div class="divider" aria-hidden="true"></div>
+    </div>
+
+    <div class="reviews-carousel-wrap">
+      <div class="reviews-carousel" id="reviewsCarousel" role="region" aria-label="Customer reviews carousel" aria-live="polite">
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">The Spanish Latte is absolutely outstanding — honestly one of the best I've had in Chennai. The ambiance is cosy and the staff genuinely friendly. Already a regular.</p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">A</div>
+            <div>
+              <div class="review-name">Arun Krishnamurthy</div>
+              <div class="review-via">📍 Google Maps</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">Finally a proper speciality café in our area! The cold coffee is chef's kiss, the croissants are fresh, and the vibe is perfect for working or catching up with friends.</p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">P</div>
+            <div>
+              <div class="review-name">Priya Venkatesh</div>
+              <div class="review-via">📍 Google Maps</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">Came for coffee, stayed for three hours. WiFi is excellent, seating is comfortable, and the cappuccino had beautiful latte art. Best café in Selaiyur, no debate.</p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">K</div>
+            <div>
+              <div class="review-name">Karthik Suresh</div>
+              <div class="review-via">📍 Google Maps</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="4 out of 5 stars">★★★★☆</div>
+          <p class="review-text">The mango slushy is AMAZING. Came in on a hot afternoon and it was exactly what I needed. Interior is aesthetic and worth an Instagram post for sure!</p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">S</div>
+            <div>
+              <div class="review-name">Swetha Rajendran</div>
+              <div class="review-via">⭐ Justdial</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="review-text">Brought my dog along and they were so welcoming! Great food, great coffee, great people. The breakfast plate was filling and the chocolate croissant was divine.</p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">M</div>
+            <div>
+              <div class="review-name">Meera Nair</div>
+              <div class="review-via">⭐ Zomato</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars" aria-label="4 out of 5 stars">★★★★☆</div>
+          <p class="review-text">Creative menu, creative staff. The Dragon Paneer was bold and absolutely delicious. It's nice to have a café that actually takes food seriously alongside the coffee.</p>
+          <div class="review-author">
+            <div class="review-avatar" aria-hidden="true">R</div>
+            <div>
+              <div class="review-name">Rohit Balakrishnan</div>
+              <div class="review-via">⭐ magicpin</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Carousel controls -->
+      <div class="carousel-controls" role="group" aria-label="Carousel controls">
+        <button class="carousel-btn" id="carouselPrev" aria-label="Previous review">&#8592;</button>
+        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Review slides"></div>
+        <button class="carousel-btn" id="carouselNext" aria-label="Next review">&#8594;</button>
+      </div>
+    </div>
+
+    <!-- Overall rating block -->
+    <div class="overall-rating reveal" aria-label="Overall rating: 4.5 out of 5 from 320 plus reviews">
+      <div>
+        <div class="big-num" aria-hidden="true">4.5</div>
+        <div class="stars" aria-hidden="true">★★★★½</div>
+        <p>320+ Reviews across platforms</p>
+      </div>
+      <div class="rating-bars" aria-hidden="true">
+        <div class="rating-bar"><span>5</span><div class="bar-track"><div class="bar-fill" style="width:68%"></div></div><span class="rating-count">68%</span></div>
+        <div class="rating-bar"><span>4</span><div class="bar-track"><div class="bar-fill" style="width:22%"></div></div><span class="rating-count">22%</span></div>
+        <div class="rating-bar"><span>3</span><div class="bar-track"><div class="bar-fill" style="width:7%"></div></div><span class="rating-count">7%</span></div>
+        <div class="rating-bar"><span>2</span><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><span class="rating-count">2%</span></div>
+        <div class="rating-bar"><span>1</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span class="rating-count">1%</span></div>
+      </div>
+      <div>
+        <p style="color:var(--latte);font-size:0.85rem;line-height:1.8;">
+          Rated 4.5 on Google Maps<br />
+          4.6 on magicpin<br />
+          4.3 on Justdial<br />
+          4.4 on Restaurant Guru
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location" aria-labelledby="location-heading">
+    <div class="location-inner">
+      <div class="reveal-left">
+        <p class="section-eyebrow">Find Us</p>
+        <h2 class="section-title" id="location-heading" style="font-size:clamp(1.8rem,3vw,2.6rem);">Come say <em>hello</em></h2>
+        <div class="divider" aria-hidden="true"></div>
+        <div class="info-block">
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="info-label">Address</div>
+              <div class="info-val">208 A, First Floor, Velachery Main Road,<br />Above Thalapakatti, Camp Road Junction,<br />Mahalakshmi Nagar, Selaiyur, Chennai – 600073</div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">🕐</div>
+            <div>
+              <div class="info-label">Hours</div>
+              <div class="info-val">Monday – Sunday<br /><strong>11:00 AM – 11:30 PM</strong></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">📞</div>
+            <div>
+              <div class="info-label">Phone</div>
+              <div class="info-val"><a href="tel:+917348819037" aria-label="Call Pronto at +91 73488 19037">+91 73488 19037</a></div>
+            </div>
+          </div>
+          <div class="info-row">
+            <div class="info-icon" aria-hidden="true">📸</div>
+            <div>
+              <div class="info-label">Instagram</div>
+              <div class="info-val"><a href="https://instagram.com/prontoindiaofficial" target="_blank" rel="noopener noreferrer" aria-label="Follow Pronto on Instagram (opens new tab)">@prontoindiaofficial</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="location-ctas">
+          <a href="tel:+917348819037" class="btn-primary" aria-label="Call Pronto to reserve a table">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.4 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.56a16 16 0 0 0 6.53 6.53l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call to Reserve
+          </a>
+          <a href="https://wa.me/917348819037?text=Hi%20Pronto!%20I%27d%20like%20to%20know%20more%20about%20your%20café." target="_blank" rel="noopener noreferrer" class="btn-whatsapp" aria-label="Chat with Pronto on WhatsApp (opens new tab)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            WhatsApp Us
+          </a>
+        </div>
+      </div>
+
+      <div class="map-embed reveal-right">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.879316!2d80.1431467!3d12.9228131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f9c2c887873%3A0x3851b2d1369abd19!2sPronto%20-%20The%20Coffee%20People!5e0!3m2!1sen!2sin!4v1681000000000!5m2!1sen!2sin"
+          width="100%"
+          height="440"
+          style="border:0;"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Map showing Pronto – The Coffee People location above Thalapakatti, Selaiyur, Chennai"
+          aria-label="Google Map showing Pronto café location in Selaiyur, Chennai"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  </main><!-- /main-content -->
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-logo" style="margin-bottom:1rem;">
+          Pronto
+          <span>The Coffee People</span>
+        </div>
+        <p>First Speciality Coffee Shop of Tambaram. Specially curated beverages &amp; delectable food in one place. Come for the coffee, stay for the conversation.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://instagram.com/prontoindiaofficial" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Pronto on Instagram (opens new tab)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/cafeprontoindia/" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Pronto on Facebook (opens new tab)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://wa.me/917348819037" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Chat with Pronto on WhatsApp (opens new tab)">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+          <!-- Swiggy link -->
+          <a href="https://www.swiggy.com/search?query=Pronto+Coffee+Selaiyur" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Order Pronto on Swiggy (opens new tab)" style="font-size:1rem;font-weight:700;color:var(--latte);font-family:var(--font-display);">S</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Visit Us</h4>
+        <ul>
+          <li><a href="https://maps.app.goo.gl/wN2Aeu9UW6yF6yXF6" target="_blank" rel="noopener noreferrer" aria-label="Get directions to Pronto (opens Google Maps)">Get Directions</a></li>
+          <li><a href="tel:+917348819037">+91 73488 19037</a></li>
+          <li><a href="https://www.instagram.com/prontoindiaofficial" target="_blank" rel="noopener noreferrer" aria-label="Pronto on Instagram (opens new tab)">Instagram</a></li>
+          <li><a href="https://www.swiggy.com/search?query=Pronto+Coffee+Selaiyur" target="_blank" rel="noopener noreferrer" aria-label="Order on Swiggy (opens new tab)">Order on Swiggy</a></li>
+        </ul>
+        <p style="font-size:0.78rem;color:rgba(240,224,200,0.4);margin-top:1.2rem;line-height:1.6;">
+          Open Daily<br />11:00 AM – 11:30 PM
+        </p>
+        <div class="fssai-note">
+          FSSAI Lic. No.: <span style="letter-spacing:0.05em;">XXXXXXXXXXXX</span><br />
+          <!-- Replace XX with actual license number -->
+          Food Safety &amp; Standards Authority of India
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Pronto – The Coffee People. All rights reserved.</p>
+      <p>Made with ☕ in Chennai</p>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BOTTOM BAR -->
+  <nav class="mobile-bottom-bar" aria-label="Quick actions">
+    <div class="mobile-bottom-bar-inner">
+      <a href="tel:+917348819037" class="mbb-btn" aria-label="Call Pronto café">
+        <span class="mbb-icon" aria-hidden="true">📞</span>
+        Call
+      </a>
+      <div class="mbb-divider" aria-hidden="true"></div>
+      <a href="https://maps.app.goo.gl/wN2Aeu9UW6yF6yXF6" target="_blank" rel="noopener noreferrer" class="mbb-btn" aria-label="Get directions to Pronto (opens Google Maps)">
+        <span class="mbb-icon" aria-hidden="true">📍</span>
+        Directions
+      </a>
+      <div class="mbb-divider" aria-hidden="true"></div>
+      <a href="https://www.swiggy.com/search?query=Pronto+Coffee+Selaiyur" target="_blank" rel="noopener noreferrer" class="mbb-btn order" aria-label="Order on Swiggy (opens new tab)">
+        <span class="mbb-icon" aria-hidden="true">🛵</span>
+        Order Swiggy
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    // ---- NAV SCROLL ----
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ---- MOBILE MENU ----
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    function closeMobile() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (!navbar.contains(e.target) && !mobileMenu.contains(e.target)) closeMobile();
+    });
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMobile();
+    });
+
+    // ---- SCROLL REVEAL ----
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+
+    // ---- MENU TABS ----
+    const tabs = document.querySelectorAll('.menu-tab');
+    const cards = document.querySelectorAll('.menu-card[data-cat]');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected', 'false'); });
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        const filter = tab.dataset.filter;
+        cards.forEach(card => {
+          if (filter === 'all' || card.dataset.cat === filter) {
+            card.style.display = '';
+            card.classList.remove('visible');
+            requestAnimationFrame(() => requestAnimationFrame(() => card.classList.add('visible')));
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // ---- STAGGER CARD REVEALS ----
+    document.querySelectorAll('.menu-card, .review-card').forEach((el, i) => {
+      el.style.transitionDelay = (i % 4) * 0.1 + 's';
+    });
+
+    // ---- REVIEWS CAROUSEL ----
+    (function() {
+      const carousel = document.getElementById('reviewsCarousel');
+      const cards = carousel.querySelectorAll('.review-card');
+      const dotsContainer = document.getElementById('carouselDots');
+      const prevBtn = document.getElementById('carouselPrev');
+      const nextBtn = document.getElementById('carouselNext');
+
+      let current = 0;
+      let itemsPerView = 3;
+      let totalSlides;
+      let autoplayTimer;
+
+      function getItemsPerView() {
+        if (window.innerWidth <= 600) return 1;
+        if (window.innerWidth <= 900) return 2;
+        return 3;
+      }
+
+      function buildDots() {
+        dotsContainer.innerHTML = '';
+        totalSlides = Math.ceil(cards.length / itemsPerView);
+        for (let i = 0; i < totalSlides; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+          dot.setAttribute('role', 'tab');
+          dot.addEventListener('click', () => goTo(i));
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function goTo(index) {
+        itemsPerView = getItemsPerView();
+        totalSlides = Math.ceil(cards.length / itemsPerView);
+        current = Math.max(0, Math.min(index, totalSlides - 1));
+        const cardWidth = carousel.offsetWidth / itemsPerView;
+        carousel.style.transform = `translateX(-${current * cardWidth * itemsPerView}px)`;
+        // update dots
+        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      // Make carousel scrollable via transform
+      carousel.style.display = 'flex';
+      carousel.style.transition = 'transform 0.5s cubic-bezier(0.4,0,0.2,1)';
+      carousel.style.overflow = 'hidden';
+
+      function setup() {
+        itemsPerView = getItemsPerView();
+        buildDots();
+        goTo(0);
+      }
+
+      prevBtn.addEventListener('click', () => {
+        clearTimeout(autoplayTimer);
+        goTo(current - 1 < 0 ? totalSlides - 1 : current - 1);
+        scheduleAutoplay();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        clearTimeout(autoplayTimer);
+        goTo(current + 1 >= totalSlides ? 0 : current + 1);
+        scheduleAutoplay();
+      });
+
+      function scheduleAutoplay() {
+        autoplayTimer = setTimeout(() => {
+          goTo(current + 1 >= totalSlides ? 0 : current + 1);
+          scheduleAutoplay();
+        }, 5000);
+      }
+
+      // Keyboard support for carousel
+      carousel.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') { prevBtn.click(); }
+        if (e.key === 'ArrowRight') { nextBtn.click(); }
+      });
+
+      // Touch/swipe support
+      let startX = 0;
+      carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+      carousel.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 50) {
+          if (dx < 0) nextBtn.click();
+          else prevBtn.click();
+        }
+      }, { passive: true });
+
+      // Resize
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(setup, 200);
+      }, { passive: true });
+
+      // Pause on focus/hover
+      carousel.addEventListener('mouseenter', () => clearTimeout(autoplayTimer));
+      carousel.addEventListener('mouseleave', scheduleAutoplay);
+
+      setup();
+      scheduleAutoplay();
+    })();
+  </script>
+</body>
+</html>
